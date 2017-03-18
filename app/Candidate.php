@@ -27,5 +27,19 @@ class Candidate extends Model
     public function user()
     {
         return $this->belongsTo('App\User');
-    }  
+    } 
+
+
+     /**
+     * Candidate belongs to a user
+     *
+     * @var array
+     */
+
+    public function tweets_president()
+    {
+        return $this->hasMany('App\Tweets_president');
+    } 
+
+
 }

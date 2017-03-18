@@ -19,9 +19,10 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/projects/Kenyan-elections-2017', 'GeneralController@show254Election');
-Route::get('/projects/Kenyan-elections-2017-charts', 'GeneralController@show254ElectionCharts');
-Route::get('/projects/candidate-details/{id}', 'GeneralController@showCandidateDetails')
+Route::get('/projects/Kenyan-elections-2017', 'ProjectController@show254Election');
+Route::get('/projects/Kenyan-elections-2017-charts', 'ProjectController@show254ElectionCharts');
+Route::get('/projects/Kenyan-elections-2017-word-cloud', 'ProjectController@getWordCloud');
+Route::get('/projects/candidate-details/{id}', 'ProjectController@showCandidateDetails')
 		->where('id', '[0-9]+');
-Route::get('/projects/compare-candidates', 'GeneralController@compareCandidates');
-Route::post('/compare-candidates', 'GeneralController@compareTwoCandidates');
+Route::get('/projects/compare-candidates', 'ProjectController@compareCandidates');
+Route::post('/compare-candidates', 'ProjectController@compareTwoCandidates');

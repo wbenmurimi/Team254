@@ -92,18 +92,22 @@
 <!-- JavaScripts -->
 
 @yield('importjs')
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
 <script type="text/javascript" src="{{ asset('asset/js/jquery.js') }}"></script>
 <script type="text/javascript" src="{{ asset('asset/js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('asset/js/gmaps.js') }}"></script>
+<!-- <script type="text/javascript" src="{{ asset('asset/js/gmaps.js') }}"></script> -->
 <script type="text/javascript" src="{{ asset('asset/js/smoothscroll.js') }}"></script>
 <script type="text/javascript" src="{{ asset('asset/js/jquery.parallax.js') }}"></script>
-<script type="text/javascript" src="{{ asset('asset/js/coundown-timer.js') }}"></script>
+<!-- <script type="text/javascript" src="{{ asset('asset/js/coundown-timer.js') }}"></script> -->
 <script type="text/javascript" src="{{ asset('asset/js/jquery.scrollTo.js') }}"></script>
 <script type="text/javascript" src="{{ asset('asset/js/jquery.nav.js') }}"></script>
-<script type="text/javascript" src="{{ asset('asset/js/main.js') }}"></script>
+<!-- <script type="text/javascript" src="{{ asset('asset/d3/d3.min.js') }}"></script> -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="{{ asset('asset/js/d3.layout.cloud.js') }}"></script>
 
 
+<!-- <script type="text/javascript" src="{{ asset('asset/js/main.js') }}"></script> -->
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
 
 <!-- {{-- <script src="{{ elixir('js/app.js') }}"></script> --}} -->
 @yield('extrajs')
