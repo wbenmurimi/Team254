@@ -21,7 +21,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/projects/Kenyan-elections-2017', 'ProjectController@show254Election');
 Route::get('/projects/Kenyan-elections-2017-charts', 'ProjectController@show254ElectionCharts');
-Route::get('/projects/Kenyan-elections-2017-word-cloud', 'ProjectController@getWordCloud');
+Route::get('/projects/Kenyan-elections-2017-word-cloud-1', 'ProjectController@getWordCloud1');
+Route::get('/projects/Kenyan-elections-2017-word-cloud-2', 'ProjectController@getWordCloud2');
 Route::get('/projects/candidate-details/{id}', 'ProjectController@showCandidateDetails')
 		->where('id', '[0-9]+');
 Route::get('/projects/compare-candidates', 'ProjectController@compareCandidates');

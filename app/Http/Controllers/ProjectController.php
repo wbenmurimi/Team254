@@ -62,24 +62,43 @@ class ProjectController extends Controller
 
 
 
+
     /**
-     * Fetch data to show the word cloud.
+     * Fetch data to show the word cloud for candidate 1.
      *
      * @return \Illuminate\Http\Response
      */
 
-    public function getWordCloud()
+    public function getWordCloud1()
     {
 
-    	$data = DB::table('tweets_presidents as w')
-    	->select(array(DB::Raw('w.tweetdate'),DB::Raw('w.tweettext'),))
-    	->orderBy('w.tweetdate')
-    	->limit(20)
+    	$data = DB::table('word_clouds')
+    	->select(array(DB::Raw('text'),DB::Raw('size')))
+    	->where('candidate_id',1)
     	->get();
 
     	
     	return $data;
-    	//return view('projects.254-elections.charts');
+
+    	}
+
+
+    /**
+     * Fetch data to show the word cloud for candidate 2.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function getWordCloud2()
+    {
+
+    	$data = DB::table('word_clouds')
+    	->select(array(DB::Raw('text'),DB::Raw('size')))
+    	->where('candidate_id',2)
+    	->get();
+
+    	
+    	return $data;
 
     	}
 
